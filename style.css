@@ -14,3 +14,7 @@ body::before {
         width: 50%;
     }
 }
+
+.yellowbg {
+    background-color: #e9e800;
+}
