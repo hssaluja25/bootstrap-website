@@ -18,3 +18,48 @@ body::before {
 .yellowbg {
     background-color: #e9e800;
 }
+
+@font-face {
+    font-family: sfpro;
+    src: url('fonts/SF-Pro-Text-Medium.otf');
+}
+
+@font-face {
+    font-family: suisse;
+    src: url('fonts/SuisseWorks-Regular.ttf');
+}
+
+@font-face {
+    font-family: sfprolight;
+    src: url('fonts/SF-Pro-Text-Light.otf');
+}
+
+.myheading {
+    font-family: suisse;
+}
+
+.mytext {
+    font-family: sfpro;
+    font-size: 17px;
+}
+
+.mybigtext {
+    font-family: sfpro;
+    font-size: 22px;    
+}
+
+.mylighttext {
+    font-family: sfprolight;
+    font-size: 17px;
+}
+
+.footer-text {
+    font-family: sfprolight;
+    font-size:14px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-text:hover {
+    text-decoration: underline;
+}

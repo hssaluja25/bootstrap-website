@@ -5,27 +5,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Harpreet Singh Saluja">
+    <meta name="description"
+        content="We focus on teaching our students the fundamentals of the latest and greatest technologies to prepare them for their first dev role.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <script src="https://kit.fontawesome.com/996385db1c.js" crossorigin="anonymous"></script>
     <title>WebDevSchool</title>
 </head>
 
 <body>
-    <!-- Creating a navbar with large breakpoint and dark background color -->
-    <!-- Large breakpoint means when the screen width is big, the links are visible. Otherwise, a hamburger menu is displayed. -->
-    <!-- Navbar-dark would make the text light color -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
         <!-- If you did not use this div then, there would be no padding to the left of the first link and to the right of the last link-->
         <div class="container">
-            <a href="#" class="navbar-brand">
-                <img src="img/smalllogo.svg" alt="hehe" width="46" height="40">WebDevSchool
+            <a href="#" class="navbar-brand myheading">
+                <img src="img/smalllogo.svg" alt="webdevschool logo" width="46" height="40">WebDevSchool
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                <span class="navbar-toggler-icon"> </span>
+                <i class="fas fa-light fa-bars"></i>
             </button>
 
             <!-- So that the navbar collpases on smaller screens to a hamburger menu -->
@@ -34,13 +36,13 @@
                 <!-- Navbar-nav is used st the links are displayed horizontally, not vertically -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav item">
-                        <a href="#learn" class="nav-link">Syllabus</a>
+                        <a href="#learn" class="nav-link mytext text-white">Syllabus</a>
                     </li>
                     <li class="nav item">
-                        <a href="#questions" class="nav-link">FAQ</a>
+                        <a href="#questions" class="nav-link mytext text-white">FAQ</a>
                     </li>
                     <li class="nav item">
-                        <a href="#instructors" class="nav-link">Meet Your Instructors</a>
+                        <a href="#instructors" class="nav-link mytext text-white">Meet Your Instructors</a>
                     </li>
                 </ul>
             </div>
@@ -48,36 +50,28 @@
     </nav>
 
     <!-- Showcase area -->
-    <!-- Pt-1 to pt-5 is available. It means padding top -->
-    <!-- Similarly, we have pb which means padding bottom -->
-    <!-- px = Padding on the x axis: (left and right) -->
-    <!-- py = Padding on the y axis -->
-    <!-- p-5 means apply padding all around -->
-    <!-- text-center refers to the alignment of text. It would only by applied on very small screens (The text-sm-start class)-->
-    <section class="bg-light text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
-        <!-- For the same reason we used container inside navbar (to apply padding so that the brnading text doesn't stick to the left of the page), we use container here too. -->
+    <!-- Text would be left aligned on small-sized and bigger screens. On screen smaller than small, text would be centered -->
+    <!-- Similarly, for padding on screens with size large or bigger, there would be padding of 5 only at the top (and no padding at the bottom, left and right). Otherwise, there would be a padidng of 5 on all sides.  -->
+    <section class=" bg-light text-dark p-5 px-lg-0 py-lg-5 text-center text-sm-start">
+        <!-- We use container here to apply padding. -->
         <div class="container">
-            <!-- Flexbox which contains the text sectiona and the image -->
-            <!-- d-flex turns flexbox items to a row (aligns left to right instead of top to bottom) -->
-            <!-- d stands for use flexbox for all screen sizes -->
-            <!-- d-sm-flex means on mobile screens the text and the image would be up and down -->
+            <!-- On small (and bigger) screens, make this div a flexbox container. -->
+            <!-- On bigger, screens, the text and the image would be at the top and bottom (Default behaviour when no flexbox is used for a div) -->
             <div class="d-sm-flex align-items-center justify-content-between">
                 <div>
-                    <h1 class="display-3">Become a <span class="text-warning">Web Developer</span></h1>
-                    <!-- Lead means the text would be a little bigger now -->
+                    <h1 class="myheading">Become a <span class="text-warning">Web Developer</span>
+                    </h1>
                     <!-- my-4 means there would be space of 4 at the top and bottom -->
-                    <p class="blockquote my-4">
+                    <p class="mybigtext my-4">
                         We focus on teaching our students the fundamentals of the latest
                         and greatest technologies to prepare them for their first dev
                         role.
                     </p>
-                    <button class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">
+                    <button class="btn btn-dark btn-lg mytext" data-bs-toggle="modal" data-bs-target="#enroll">
                         Start Now
                     </button>
                 </div>
                 <!-- Since images usually break out of the container, we have used to img-fluid class-->
-                <!-- w-50 means 50% of the size -->
-                <!-- d-none and d-sm-block means the image would not be displayed at small screen sizes -->
                 <img class="img-fluid w-50 d-none d-sm-block" src="img/logo.png" alt="" />
             </div>
         </div>
@@ -96,12 +90,12 @@
                             <div class="h1 mb-3">
                                 <i class="bi bi-laptop"></i>
                             </div>
-                            <h3 class="card-title mb-3">Virtual</h3>
+                            <h3 class="myheading mb-3">Virtual</h3>
                             <p class="card-text">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Iusto alias, quos illo delectus ipsum possimus?
                             </p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <a href="#" class="btn btn-primary mytext">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -112,12 +106,12 @@
                             <div class="h1 mb-3">
                                 <i class="bi bi-person-square"></i>
                             </div>
-                            <h3 class="card-title mb-3">Hybrid</h3>
+                            <h3 class="myheading mb-3">Hybrid</h3>
                             <p class="card-text">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Iusto alias, quos illo delectus ipsum possimus?
                             </p>
-                            <a href="#" class="btn btn-dark">Read More</a>
+                            <a href="#" class="btn btn-dark mytext">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -128,12 +122,12 @@
                             <div class="h1 mb-3">
                                 <i class="bi bi-people"></i>
                             </div>
-                            <h3 class="card-title mb-3">In Person</h3>
+                            <h3 class="myheading mb-3">In Person</h3>
                             <p class="card-text">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Iusto alias, quos illo delectus ipsum possimus?
                             </p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <a href="#" class="btn btn-primary mytext">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -149,24 +143,31 @@
                     <img src="img/fundamentals-udemy.jpg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-md p-5">
-                    <h2>The Fundamentals of Web Development</h2>
+                    <h2 class="myheading">The Fundamentals of Web Development</h2>
                     <p class="lead">
                         For absolute beginners
                     </p>
-                    <p>
-                        This course is designed for individuals who are interested in learning the fundamentals of web
-                        development. Throughout the course, you will learn the basics of HTML, CSS, and JavaScript and
+                    <p class="mytext">
+                        This course is designed for individuals who are interested in learning
+                        the fundamentals of web
+                        development. Throughout the course, you will learn the basics of HTML,
+                        CSS, and JavaScript and
                         how to use them to build dynamic and interactive websites.
-                        You will learn how to create and structure web pages using HTML and apply styling using CSS.
-                        You will also learn how to use JavaScript to make your websites interactive and dynamic.
-                        Additionally, you will learn about the Document Object Model (DOM), and how to manipulate it
+                        You will learn how to create and structure web pages using HTML and
+                        apply styling using CSS.
+                        You will also learn how to use JavaScript to make your websites
+                        interactive and dynamic.
+                        Additionally, you will learn about the Document Object Model (DOM), and
+                        how to manipulate it
                         using JavaScript.
-                        You will be introduced to web development tools and workflows, such as text editors, version
+                        You will be introduced to web development tools and workflows, such as
+                        text editors, version
                         control, and browser developer tools.
-                        By the end of this course, you will have a solid understanding of the basics of web development
+                        By the end of this course, you will have a solid understanding of the
+                        basics of web development
                         and the ability to build basic web pages and applications.
                     </p>
-                    <a href="#" class="btn btn-dark mt-3">
+                    <a href="#" class="mytext btn btn-dark mt-3">
                         <i class="bi bi-chevron-right"></i>
                         Read More
                     </a>
@@ -180,21 +181,28 @@
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md p-5">
-                    <h2>React</h2>
+                    <h2 class="myheading">React</h2>
                     <p class="lead">
-                        Developed by Facebook, React is the most popular JavaScript library for building user
+                        Developed by Facebook, React is the most popular JavaScript library for
+                        building user
                         interfaces.
                     </p>
-                    <p>
-                        This course is designed for developers who want to learn how to build dynamic and responsive
-                        user interfaces using React. Through a series of hands-on exercises and real-world projects, you
-                        will learn the fundamentals of React, including JSX, components, state management, and the React
-                        lifecycle. You will also learn how to use popular React libraries and tools, such as Redux and
-                        React Router, to manage application state and navigate between pages. By the end of this course,
-                        you will have the skills and knowledge to build robust and scalable web and mobile applications
+                    <p class="mytext">
+                        This course is designed for developers who want to learn how to build
+                        dynamic and responsive
+                        user interfaces using React. Through a series of hands-on exercises and
+                        real-world projects, you
+                        will learn the fundamentals of React, including JSX, components, state
+                        management, and the React
+                        lifecycle. You will also learn how to use popular React libraries and
+                        tools, such as Redux and
+                        React Router, to manage application state and navigate between pages. By
+                        the end of this course,
+                        you will have the skills and knowledge to build robust and scalable web
+                        and mobile applications
                         using React.
                     </p>
-                    <a href="#" class="btn btn-light mt-3">
+                    <a href="#" class="mytext btn btn-light mt-3">
                         <i class="bi bi-chevron-right"></i>
                         Read More
                     </a>
@@ -209,22 +217,25 @@
     <!-- FAQ -->
     <section id="questions" class="p-5">
         <div class="container">
-            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <h2 class="myheading text-center mb-4">Frequently Asked Questions</h2>
             <div class="accordion accordion-flush" id="questions">
                 <!-- Question 1 -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <!-- Data=bs-target should match the id of content of this particular accordion item -->
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <button class="mytext accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#question-1">
                             What are the benefits of taking a web development course?
                         </button>
                     </h2>
                     <div id="question-1" class="accordion-collapse collapse" data-bs-parent="#questions">
-                        <div class="accordion-body">
-                            Taking a web development course can help you learn the technical and creative skills needed
-                            to build and design websites. It can also help you understand the latest web development
-                            trends and technologies, and improve your chances of getting a job in the web development
+                        <div class="lead accordion-body">
+                            Taking a web development course can help you learn the technical and
+                            creative skills needed
+                            to build and design websites. It can also help you understand the
+                            latest web development
+                            trends and technologies, and improve your chances of getting a job
+                            in the web development
                             field.
                         </div>
                     </div>
@@ -234,16 +245,19 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <!-- Data=bs-target should match the id of content of this particular accordion item -->
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <button class="mytext accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#question-2">
                             How much does it cost to attend?
                         </button>
                     </h2>
                     <div id="question-2" class="accordion-collapse collapse" data-bs-parent="#questions">
-                        <div class="accordion-body">
-                            The cost to attend the web development course will depend on the specific course and
-                            institution offering it. Some web development courses are free and offered online, while
-                            others are part of a paid program or certification at a college or university. Some web
+                        <div class="lead accordion-body">
+                            The cost to attend the web development course will depend on the
+                            specific course and
+                            institution offering it. Some web development courses are free and
+                            offered online, while
+                            others are part of a paid program or certification at a college or
+                            university. Some web
                             development bootcamp programs also have tuition cost.
                         </div>
                     </div>
@@ -253,16 +267,19 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <!-- Data=bs-target should match the id of content of this particular accordion item -->
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <button class="mytext accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#question-3">
                             What programming languages will be taught?
                         </button>
                     </h2>
                     <div id="question-3" class="accordion-collapse collapse" data-bs-parent="#questions">
-                        <div class="accordion-body">
-                            This course will help you get familiar with the most common programming languages used in
-                            web development i.e., HTML, CSS, and JavaScript. In the Advanced sections, you would learn
-                            to use popular JavaScript libraries such as React to create breaktaking UI.
+                        <div class="lead accordion-body">
+                            This course will help you get familiar with the most common
+                            programming languages used in
+                            web development i.e., HTML, CSS, and JavaScript. In the Advanced
+                            sections, you would learn
+                            to use popular JavaScript libraries such as React to create
+                            breaktaking UI.
                         </div>
                     </div>
                 </div>
@@ -271,30 +288,37 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <!-- Data=bs-target should match the id of content of this particular accordion item -->
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <button class="mytext accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#question-4">
                             How do I sign up?
                         </button>
                     </h2>
                     <div id="question-4" class="accordion-collapse collapse" data-bs-parent="#questions">
-                        <div class="accordion-body">
-                            To sign up for a web development course, you will typically need to follow these steps:
+                        <div class="lead accordion-body">
+                            To sign up for a web development course, you will typically need to
+                            follow these steps:
 
                             <ol>
-                                <li>Find a course or program that meets your needs and interests by researching
+                                <li>Find a course or program that meets your needs and interests
+                                    by researching
                                     different
                                     options online or contacting the institution directly.</li>
-                                <li>Review the course requirements and prerequisites to ensure that you meet the
+                                <li>Review the course requirements and prerequisites to ensure
+                                    that you meet the
                                     qualifications
                                     to participate.</li>
-                                <li>Submit an application to the institution or course provider, which may include
+                                <li>Submit an application to the institution or course provider,
+                                    which may include
                                     providing
-                                    personal information, educational background, and any other required documentation.
+                                    personal information, educational background, and any other
+                                    required documentation.
                                 </li>
                                 <li>Pay any applicable tuition or course fees.</li>
-                                <li>Once your application is accepted and payment is processed, you will receive
+                                <li>Once your application is accepted and payment is processed,
+                                    you will receive
                                     confirmation of
-                                    your enrollment, along with instructions on how to access the course materials and
+                                    your enrollment, along with instructions on how to access
+                                    the course materials and
                                     start the
                                     program.</li>
                             </ol>
@@ -306,15 +330,17 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <!-- Data=bs-target should match the id of content of this particular accordion item -->
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <button class="mytext accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#question-5">
                             Will you help me find a job?
                         </button>
                     </h2>
                     <div id="question-5" class="accordion-collapse collapse" data-bs-parent="#questions">
-                        <div class="accordion-body">
-                            Rest Assured. We have career support service that would help you with finding job
-                            opportunities by connecting you to potential employers and providing you with tips and
+                        <div class="lead accordion-body">
+                            Rest Assured. We have career support service that would help you
+                            with finding job
+                            opportunities by connecting you to potential employers and providing
+                            you with tips and
                             guidance on the job search process.
                         </div>
                     </div>
@@ -326,8 +352,8 @@
     <!-- Meet our Instructors -->
     <section id="instructors" class="p-5 yellowbg">
         <div class="container">
-            <h2 class="text-center text-dark">Our Instructors</h2>
-            <p class="lead text-center text-dark mb-5">
+            <h2 class="myheading text-center text-dark">Our Instructors</h2>
+            <p class="mybigtext text-center text-dark mb-5">
                 All of our instructors have experience of 5+ years working as a web
                 developer in the industry.
             </p>
@@ -340,28 +366,30 @@
                         <div class="card-body text-center">
                             <img src="https://randomuser.me/api/portraits/men/11.jpg" class="rounded-circle mb-3"
                                 alt="" />
-                            <h3 class="card-title mb-3">John Doe</h3>
-                            <p class="card-text">
-                                John Doe is currently a senior at UC Berkeley majoring in Electrical Engineering and
-                                Computer Science. He's the CEO and Founder of TheCodex, an online educational platform
-                                focused on bringing the best programming content to hundreds of thousands of students
-                                around the world. He has a passion to teach - his enthusiasm and love for programming is
-                                evident in every video. For the past 7 years he's been an instructor on WebDevSchool and
-                                he loves motivating and enabling others to pursue their programming dreams.
-                                He hopes to help students realize the power of programming and jumpstart their careers
+                            <h3 class="mybigtext card-title mb-3">John Doe
+                            </h3>
+                            <p class="mylighttext text-start card-text">
+                                John Doe is currently a senior at UC Berkeley majoring in
+                                Electrical Engineering and
+                                Computer Science. He's the CEO and Founder of TheCodex, an
+                                online educational platform
+                                focused on bringing the best programming content to hundreds of
+                                thousands of students
+                                around the world. He has a passion to teach - his enthusiasm and
+                                love for programming is
+                                evident in every video. For the past 7 years he's been an
+                                instructor on WebDevSchool and
+                                he loves motivating and enabling others to pursue their
+                                programming dreams.
+                                He hopes to help students realize the power of programming and
+                                jumpstart their careers
                                 through his courses.
                             </p>
                             <a href="#">
-                                <i class="bi bi-twitter text-dark mx-1"></i>
+                                <i class="fa fa-lg fa-brands fa-linkedin-in m-3"></i>
                             </a>
                             <a href="#">
-                                <i class="bi bi-facebook text-dark mx-1"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-linkedin text-dark mx-1"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-instagram text-dark mx-1"></i>
+                                <i class="fa fa-lg fa-brands fa-github m-3"></i>
                             </a>
                         </div>
                     </div>
@@ -373,24 +401,23 @@
                         <div class="card-body text-center">
                             <img src="https://randomuser.me/api/portraits/women/9.jpg" class="rounded-circle mb-3"
                                 alt="" />
-                            <h3 class="card-title mb-3">Jane Doe</h3>
-                            <p class="card-text">
-                                You've taken a lengthy and boring coding class, but you're clueless about applying these
-                                concepts to build your ideas. I will show you how to build fun, practical projects.
-                                Now, you can stand out from the crowd and land your dream job. I've taught more than
-                                2,000,000 students on a broad variety of topics and I'd love to teach you as well!
+                            <h3 class="mybigtext card-title mb-3">Jane Doe
+                            </h3>
+                            <p class="mylighttext text-start card-text">
+                                You've taken a lengthy and boring coding class, but you're
+                                clueless about applying these
+                                concepts to build your ideas. I will show you how to build fun,
+                                practical projects.
+                                Now, you can stand out from the crowd and land your dream job.
+                                I've taught more than
+                                2,000,000 students on a broad variety of topics and I'd love to
+                                teach you as well!
                             </p>
                             <a href="#">
-                                <i class="bi bi-twitter text-dark mx-1"></i>
+                                <i class="fa fa-lg fa-brands fa-linkedin-in m-3"></i>
                             </a>
                             <a href="#">
-                                <i class="bi bi-facebook text-dark mx-1"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-linkedin text-dark mx-1"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-instagram text-dark mx-1"></i>
+                                <i class="fa fa-lg fa-brands fa-github m-3"></i>
                             </a>
                         </div>
                     </div>
@@ -402,28 +429,31 @@
                         <div class="card-body text-center">
                             <img src="https://randomuser.me/api/portraits/men/10.jpg" class="rounded-circle mb-3"
                                 alt="" />
-                            <h3 class="card-title mb-3">Steve Smith</h3>
-                            <p class="card-text">
-                                Starting out at the age of 12 I never stopped learning new programming skills and
-                                languages. This passion has since lasted and lead to my decision of working as a
-                                freelance web developer and consultant. Starting web development on the
-                                backend I also became more and more of a frontend developer using modern frameworks like
-                                React, Angular or VueJS in a lot of projects. I love both worlds nowadays! As a
-                                self-taught professional I really know the hard parts and the difficult topics when
-                                learning new or improving on already-known languages. My track record of many 5-star
-                                rated courses and more than 2,000,000 students on Udemy is the best proof for that.
+                            <h3 class="mybigtext card-title mb-3">Steve
+                                Smith</h3>
+                            <p class="mylighttext text-start card-text">
+                                Starting out at the age of 12 I never stopped learning new
+                                programming skills and
+                                languages. This passion has since lasted and lead to my decision
+                                of working as a
+                                freelance web developer and consultant. Starting web development
+                                on the
+                                backend I also became more and more of a frontend developer
+                                using modern frameworks like
+                                React, Angular or VueJS in a lot of projects. I love both worlds
+                                nowadays! As a
+                                self-taught professional I really know the hard parts and the
+                                difficult topics when
+                                learning new or improving on already-known languages. My track
+                                record of many 5-star
+                                rated courses and more than 2,000,000 students on Udemy is the
+                                best proof for that.
                             </p>
                             <a href="#">
-                                <i class="bi bi-twitter text-dark mx-1"></i>
+                                <i class="fa fa-lg fa-brands fa-linkedin-in m-3"></i>
                             </a>
                             <a href="#">
-                                <i class="bi bi-facebook text-dark mx-1"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-linkedin text-dark mx-1"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-instagram text-dark mx-1"></i>
+                                <i class="fa fa-lg fa-brands fa-github m-3"></i>
                             </a>
                         </div>
                     </div>
@@ -435,28 +465,28 @@
                         <div class="card-body text-center">
                             <img src="https://randomuser.me/api/portraits/women/8.jpg" class="rounded-circle mb-3"
                                 alt="" />
-                            <h3 class="card-title mb-3">Sarah Smith</h3>
-                            <p class="card-text">
-                                Sarah Smith has been building complex Javascript front ends for top corporations in the
-                                San Francisco Bay Area. With an innate ability to simplify complex topics, Sarah has
-                                been mentoring engineers beginning their careers in software development for years, and
-                                has now expanded that experience onto WebDevSchool, authoring the highest rated React
+                            <h3 class="mybigtext card-title mb-3">Sarah
+                                Smith</h3>
+                            <p class="mylighttext text-start card-text">
+                                Sarah Smith has been building complex Javascript front ends for
+                                top corporations in the
+                                San Francisco Bay Area. With an innate ability to simplify
+                                complex topics, Sarah has
+                                been mentoring engineers beginning their careers in software
+                                development for years, and
+                                has now expanded that experience onto WebDevSchool, authoring
+                                the highest rated React
                                 course.
-                                She teaches on WebDevSchool to share the knowledge she has gained with other software
+                                She teaches on WebDevSchool to share the knowledge she has
+                                gained with other software
                                 engineers.
                                 Invest in yourself by learning from Sarah's published courses.
                             </p>
                             <a href="#">
-                                <i class="bi bi-twitter text-dark mx-1"></i>
+                                <i class="fa fa-lg fa-brands fa-linkedin-in m-3"></i>
                             </a>
                             <a href="#">
-                                <i class="bi bi-facebook text-dark mx-1"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-linkedin text-dark mx-1"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-instagram text-dark mx-1"></i>
+                                <i class="fa fa-lg fa-brands fa-github m-3"></i>
                             </a>
                         </div>
                     </div>
@@ -470,24 +500,28 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-md">
-                    <h2 class="text-center mb-4">Contact Info</h2>
+                    <h2 class="myheading text-center mb-4">Contact Info</h2>
                     <ul class="list-group list-group-flush lead">
                         <li class="list-group-item">
-                            <span class="fw-bold">Address: </span> No. 3, Old Madras Rd, Sadanandanagar, Bennigana
-                            Halli, Bengaluru, Karnataka
+                            <span class="fw-bold mybigtext">Address </span>
+                            <span class="mylighttext" style="font-size: 22px">No. 3, Old Madras Rd,
+                                Sadanandanagar, Bennigana
+                                Halli, Bengaluru, Karnataka</span>
                         </li>
                         <li class="list-group-item">
-                            <span class="fw-bold">Phone: </span> +91 7584455145
+                            <span class="fw-bold mybigtext">Phone </span>
+                            <span class="mylighttext" style="font-size: 22px">+91 7584455145 </span>
                         </li>
                         <li class="list-group-item">
-                            <span class="fw-bold">Email: </span>
-                            <a href="mailto:enroll@webdevschool.com" target="_blank">enroll@webdevschool.com
+                            <span class="fw-bold mybigtext">Email </span>
+                            <a href="mailto:enroll@webdevschool.com" target="_blank" class="mylighttext"
+                                style="font-size: 22px">enroll@webdevschool.com
                             </a>
                         </li>
                         <li class="list-group-item">
-                            <span class="fw-bold">LinkedIn: </span>
-                            <a href="https://www.linkedin.com/in/WebDevSchool"
-                                target="_blank">https://www.linkedin.com/in/WebDevSchool</a>
+                            <span class="fw-bold mybigtext">LinkedIn </span>
+                            <a href="https://www.linkedin.com/in/WebDevSchool" target="_blank" class="mylighttext"
+                                style="font-size: 22px">https://www.linkedin.com/in/WebDevSchool</a>
                         </li>
                     </ul>
                 </div>
@@ -508,12 +542,12 @@
             <!-- d-md-flex means the flexbox doesn't kick in till the medium breakpoint -->
             <div class="d-md-flex justify-content-between align-items-center">
                 <!-- Margin bottom of 3 is there only on screens greater than medium -->
-                <h3 class="mb-3 mb-md-0">Sign Up for the Newsletter</h3>
+                <h3 class="myheading mb-3 mb-md-0">Sign Up for the Newsletter</h3>
 
                 <!-- news-input class is made by us so that we can decrease the size of the input group -->
                 <div class="input-group news-input">
                     <input type="text" class="form-control" placeholder="Email" />
-                    <button class="btn btn-dark btn-lg" type="button">Subscribe</button>
+                    <button class="btn btn-dark btn-lg mytext" type="button">Subscribe</button>
                 </div>
             </div>
         </div>
@@ -521,9 +555,36 @@
 
 
     <!-- Footer -->
-    <footer class="p-5 bg-dark text-white text-center">
-        <div class="container">
-            <p class="lead">Copyright &copy; 2023</p>
+    <footer class="pt-2 bg-dark text-white">
+        <div class="d-sm-flex">
+            <div class="d-sm-flex flex-column mx-4 mx-sm-5 mt-sm-3 mb-sm-5 mt-2">
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">WebDevSchool Business</a></div>
+                <div class="mb-1"><a href=" #" target="_blank" class="footer-text">Teach on WebDevSchool</a></div>
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Get the app</a></div>
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">About us</a></div>
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Contact us</a></div>
+            </div>
+            <div class="d-sm-flex flex-column mx-4 mx-sm-5 mt-sm-3 mb-sm-5">
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Careers</a></div>
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Blog</a></div>
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Help and Support</a></div>
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Affiliate</a></div>
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Investors</a></div>
+            </div>
+            <div class="d-sm-flex flex-column mx-4 mx-sm-5 mt-sm-3 mb-sm-5 mb-4">
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Terms</a></div>
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Privacy Policy</a></div>
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Cookie Settings</a></div>
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Sitemap</a></div>
+                <div class="mb-1"><a href="#" target="_blank" class="footer-text">Accessibility statement</a></div>
+            </div>
+        </div>
+        <div class="d-sm-flex justify-content-between mt-3 mx-sm-5 mx-3">
+            <a href="#" class="navbar-brand myheading">
+                <img src="img/smalllogo.svg" alt="webdevschool logo" width="46" height="40">
+                WebDevSchool
+            </a>
+            <div class="mytext mt-1" style="font-size:14px">&copy; 2023</div>
         </div>
     </footer>
 
