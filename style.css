@@ -79,8 +79,8 @@ body::before {
   font-size: 2rem;
   font-family: sfpro;
   font-weight: 700;
-  color: #D61355;
-  background-color: #ffe6ea;
+  color: #A084DC;
+  background-color: #F7EFE5;
   padding: 0.75em 1.25em;
   border: 0;
   border-radius: var(--border-radius);
