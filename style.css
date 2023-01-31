@@ -4,10 +4,6 @@ body::before {
     height: 60px;
 }
 
-#map {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 /* The breakpoint for medium is 768 */
 @media(min-width: 768px) {
     .news-input {
@@ -62,6 +58,12 @@ body::before {
 
 .footer-text:hover {
     text-decoration: underline;
+}
+
+iframe {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: calc(40vh+200px);
+  width: 40vw;
 }
 
 /* All the styles from here are for the boxes */
