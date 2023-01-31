@@ -63,3 +63,109 @@ body::before {
 .footer-text:hover {
     text-decoration: underline;
 }
+
+/* All the styles from here are for the boxes */
+.button-glow {
+  --glow-length: 20px;
+  --glow-inner-color: #fff;
+  --glow-inner-thickness: 2px;
+  --glow-outer-color: #FCE22A;
+  --glow-outer-size: 8px;
+  --glow-offset: 0px;
+  --animation-speed: 1200ms;
+  --border-radius: 1.25rem;
+  --svg-offset: 100px;
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: sfpro;
+  font-weight: 700;
+  color: #D61355;
+  background-color: #ffe6ea;
+  padding: 0.75em 1.25em;
+  border: 0;
+  border-radius: var(--border-radius);
+  position: relative;
+}
+
+.button-glow svg {
+  position: absolute;
+  inset: calc(var(--svg-offset) / -2);
+  width: calc(100% + var(--svg-offset) + var(--glow-offset));
+  height: calc(100% + var(--svg-offset) + var(--glow-offset));
+  opacity: 0;
+  pointer-events: none;
+}
+
+.glow,
+.border {
+  width: calc(100% - var(--svg-offset) + var(--glow-offset));
+  height: calc(100% - var(--svg-offset) + var(--glow-offset));
+  x: calc(var(--svg-offset) / 2 - (var(--glow-offset) / 2));
+  y: calc(var(--svg-offset) / 2 - (var(--glow-offset) / 2));
+  fill: transparent;
+  rx: var(--border-radius);
+  stroke-dasharray: var(--glow-length) calc(50px - var(--glow-length));
+  stroke-dashoffset: 0;
+}
+
+.border {
+  stroke-width: var(--glow-inner-thickness);
+  stroke: var(--glow-inner-color);
+}
+
+.glow {
+  stroke-width: var(--glow-outer-size);
+  stroke: var(--glow-outer-color);
+  filter: blur(var(--glow-outer-size));
+}
+
+.button-glow:is(:hover, :focus) svg {
+  -webkit-animation: glow-visibility var(--animation-speed) ease-in-out forwards;
+          animation: glow-visibility var(--animation-speed) ease-in-out forwards;
+}
+
+.button-glow:is(:hover, :focus) :is(.glow, .border) {
+  -webkit-animation: glow-movement var(--animation-speed) ease-in forwards;
+          animation: glow-movement var(--animation-speed) ease-in forwards;
+}
+
+@-webkit-keyframes glow-visibility {
+  0%, 100% {
+    opacity: 0;
+  }
+  25%, 40% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow-visibility {
+  0%, 100% {
+    opacity: 0;
+  }
+  25%, 40% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes glow-movement {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: -120px;
+  }
+}
+@keyframes glow-movement {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: -120px;
+  }
+}
+.button-glow[data-style=offset] :is(.border, .glow) {
+  --glow-offset: 10px;
+}
+
+.button-glow[data-style=no-move] :is(.border, .glow) {
+  --glow-length: 50px;
+}
